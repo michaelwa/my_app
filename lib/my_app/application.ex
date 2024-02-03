@@ -9,7 +9,8 @@ defmodule MyApp.Application do
   def start(_type, _args) do
     children = [
       MyAppWeb.Telemetry,
-      MyApp.Repo,
+      # MyApp.Repo,
+      MyApp.EdgeDB,
       {DNSCluster, query: Application.get_env(:my_app, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: MyApp.PubSub},
       # Start the Finch HTTP client for sending emails

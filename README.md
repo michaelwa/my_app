@@ -1,5 +1,20 @@
 # MyApp
 
+Clone this repository
+Fetch clean_up branch
+Initialize EdgeDB 
+Run EdgeDB UI
+Insert a new user record
+Run iex 
+Verify EdgeDB client is working.
+  {:ok, client} = EdgeDB.start_link()
+  EdgeDB.query!(client, "select User { id, name, friends: { id, name, } }")
+
+Try running the :edge_ecto example
+  MyApp.EdgeDB.Accounts.get_user_by_id("628da6f8-c2c2-11ee-82de-97b7577ea168")
+
+
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
@@ -16,3 +31,5 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+

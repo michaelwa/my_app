@@ -7,9 +7,9 @@
 # General application configuration
 import Config
 
-config :my_app,
-  ecto_repos: [MyApp.Repo],
-  generators: [timestamp_type: :utc_datetime]
+# config :my_app,
+#   ecto_repos: [MyApp.Repo],
+#   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
 config :my_app, MyAppWeb.Endpoint,
